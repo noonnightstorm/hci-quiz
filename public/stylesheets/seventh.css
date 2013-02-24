@@ -1,0 +1,92 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.header{
+	width: 100%;
+	height: 7px;
+}
+.header div{
+	float: left;
+	width: 25%;
+	height: 7px;
+}
+.blue-rec{
+	background-color: #003595;
+}
+.green-rec{
+	background-color: #00A702;
+}
+.yello-rec{
+	background-color: #E1AF00;
+}
+.red-rec{
+	background-color: #CD2B26;
+}
+
+.body{
+	width: 1024px;
+	margin: auto;
+}
+.title{
+	margin:50px 30px 30px 35px;
+	font-size: 43px;
+	color: #544cbb;
+}
+.tips{
+	color: #e2b001;
+}
+.pic-box{
+	height: 465px;
+	position: relative;
+	margin: 25px auto;
+	border: 1px dashed #999;
+}
+.circle-box{
+	float: left;
+	margin: 20px 0 20px 220px;
+}
+.triangle-box{
+	float: left;
+	margin: 18px 0 20px 220px;
+}
+.circle-model{
+	margin: 20px 0;
+}
+.triangle-model{
+	margin: 10px 0 10px 80px;
+}
+
+#circle{
+	/*width: 150px;
+	height: 150px;*/
+	margin: 15px 0;
+}
+#triangle{
+	/*width: 150px;
+	height: 150px;*/
+	margin: 15px 0;
+}
+.code-item{
+	float: left;
+	margin:0 0 20px 180px;
+}
+.code-text{
+	width: 220px;
+	height: 120px;
+	margin:7px 0 2px 8px;
+}
+.submit{
+	display: block;
+	clear: both;
+	width: 100px;
+	height: 28px;
+	margin: 10px 0 10px 190px;
+	border: 0px;
+	background-color: #424242;
+	color: white;
+	cursor: pointer;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}

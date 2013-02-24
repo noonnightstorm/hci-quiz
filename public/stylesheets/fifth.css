@@ -1,0 +1,82 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.header{
+	width: 100%;
+	height: 7px;
+}
+.header div{
+	float: left;
+	width: 25%;
+	height: 7px;
+}
+.blue-rec{
+	background-color: #003595;
+}
+.green-rec{
+	background-color: #00A702;
+}
+.yello-rec{
+	background-color: #E1AF00;
+}
+.red-rec{
+	background-color: #CD2B26;
+}
+
+.body{
+	width: 1024px;
+	margin: auto;
+}
+.title{
+	margin:50px 30px 30px 35px;
+	font-size: 43px;
+	color: #333333;
+}
+.tips{
+	color: #b4b4b4;
+}
+.pic-box{
+	position: relative;
+	margin: 25px auto;
+	border: 1px dashed #999;
+}
+.pic_H{
+	position: absolute;
+	top: 18px;
+	left: 500px;
+}
+.pic_C{
+	position: absolute;
+	top: 18px;
+	left: 650px;
+}
+.pic_I{
+	position: absolute;
+	top: 18px;
+	left: 780px;
+}
+
+.code-item{
+	float: left;
+	margin-left: 40px;
+}
+.code-text{
+	width: 250px;
+	height: 130px;
+	margin: 8px 8px 8px 15px;
+}
+.code-last{
+	margin-bottom: 30px;
+}
+.code-check-btn{
+	display: block;
+	width: 100px;
+	height: 28px;
+	margin-left: 455px;
+	border: 0px;
+	clear: both;
+	background-color: #424242;
+	color: #fff;
+	cursor: pointer;
+}

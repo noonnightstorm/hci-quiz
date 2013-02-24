@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/second.css">
+</head>
+<body>
+	<header class="header">
+		<div class="blue-rec"></div>
+		<div class="green-rec"></div>
+		<div class="yello-rec"></div>
+		<div class="red-rec"></div>
+	</header>
+	<div class="body">
+		<h1 class="title">第二关:密码的世界</h1>
+		<p class="tips">tips:密码的世界总是神奇的,但我们写网页的时候总是要将密码经过某种不可逆的算法加密的(16位小写),虽然是不可逆,但还是有人通过枚举能还原出来,某种情况下,加密可能不止是一次的哦,亲!(有很多时候也通过“加盐”的方法，当然我这里没用)</p>
+		<p class="tips-aside">
+			ps:曾经有个研究生跟我说过,以我的智商,至少1个月才能摸透这种加密算法,十分伤心！
+		</p>
+		<div class="logo-box">
+			<img src="../images/second_code.png">
+		</div>
+		<div class="code-box">
+			<form class="code-form" onSubmit="true" action="/third" method="get">
+				<h2 class="code-title">欢迎来到加密的世界</h2>
+				<p class="code-origin">原文:HCI</p>
+				<input type="code-text" class="code-input" placeholder="密钥">
+				<!-- bf66f1eecca8f3eb -->
+				<button class="code-btn">提交</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
