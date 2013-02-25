@@ -39,7 +39,9 @@ app.get("/fourth",routes.fourth);
 app.get("/fifth",routes.fifth);
 app.post("/fifth_check",check.fifth_check);
 app.get("/sixth",routes.sixth);
+app.post("/sixth_check",check.sixth_check);
 app.get("/seventh",routes.seventh);
+app.post("/seventh_check",check.seventh_check);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

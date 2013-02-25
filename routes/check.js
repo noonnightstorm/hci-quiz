@@ -27,8 +27,25 @@ exports.third_check = function(req,res){
 };
 exports.fifth_check = function(req,res){
 	if(req.session.count == 5 && req.body.info =="pass"){
-		console.log("fifth success!");
 		req.session.count = 6;
+		success(res);
+	}
+	else{
+		fail(res);		
+	}
+};
+exports.sixth_check = function(req,res){
+	if(req.session.count == 6 && req.body.info =="pass"){
+		req.session.count = 7;
+		success(res);
+	}
+	else{
+		fail(res);		
+	}
+};
+exports.seventh_check = function(req,res){
+	if(req.session.count == 7 && req.body.info =="pass"){
+		req.session.count = 8;
 		success(res);
 	}
 	else{

@@ -2,6 +2,7 @@ window.onload = function(){
 	Code.init();
 	/*$(".add-code-btn").click(Code.addCode);*/
 	$(".code-btn").click(Code.move);
+	$(".add-code-btn").click(Code.init);
 }
 var Code = {
 	A : [],
@@ -14,6 +15,7 @@ var Code = {
 		var node = $(".code-box-row")[0];
 		var child = $(node).clone(true);
 		$(".clone-box").remove();
+		$(".code-btn").show();
 
 		this.A = [];
 		this.B = [];
@@ -87,7 +89,9 @@ var Code = {
 	},
 	addCode : function(){
 		if(Code.count==14){
-			console.log(Code.check());
+			/*console.log(Code.check());*/
+			if(Code.check() == true)
+				pass();
 		}
 
 		$(".code-btn").hide();
@@ -113,3 +117,27 @@ var Code = {
 		return false; 
 	}
 };
+
+function pass(){
+	$.ajax({
+		url : "/sixth_check",
+		data : {
+			info : "pass"
+		},
+		dateType : "json",
+		type : "post",
+		cache : false,
+		success : function(data){
+			console.log(data);
+			if(data.result == "success"){
+				window.location.href = "/seventh";
+			}
+			else{
+				window.location.href = "/";
+			}
+		},
+		error : function(){
+			alert("发送信息失败");
+		}
+	});
+}

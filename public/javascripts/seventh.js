@@ -1,6 +1,6 @@
 window.onload = function(){
 	$(".code-text").keyup(getCSS).change(getCSS);
-	$(".submit").click(Check.checkAll);
+	$(".submit").click(pass);
 }
 
 var Check = {
@@ -82,4 +82,34 @@ function changeColor(color){
 	}
 	else
 		return color;
+}
+function pass(){
+	if(Check.checkAll() == true){
+		$.ajax({
+			url : "/seventh_check",
+			data : {
+				info : "pass"
+			},
+			dateType : "json",
+			type : "post",
+			cache : false,
+			success : function(data){
+				console.log(data);
+				if(data.result == "success"){
+					/*window.location.href = "/seventh";*/
+					alert("Thank for your texting!It will be On-line on this Sunday normally!");
+					window.location.href = "/";
+				}
+				else{
+					window.location.href = "/";
+				}
+			},
+			error : function(){
+				alert("发送信息失败");
+			}
+		});
+	}
+	else{
+		$(".code-text").css("background","red");
+	}
 }
