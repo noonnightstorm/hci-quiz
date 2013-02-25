@@ -7,14 +7,6 @@ exports.index = function(req, res){
 	req.session.count = 1;
     res.render('first', { title: 'Express' });
 };
-exports.first_check = function(req,res){
-	if(req.session.count == 1 && req.body.info == "pass"){
-		req.session.count = 2;
-		res.writeHead(200, {'content-type': 'text/json' });
-		res.write( JSON.stringify({ result : "success"}) );
-		res.end('\n');
-	}
-};
 exports.second = function(req,res){
 	if(req.session.count == 2){
 		res.render("second",{});
@@ -24,18 +16,18 @@ exports.second = function(req,res){
 	
 };
 exports.third = function(req,res){
-	if(req.session.count == 2)
-		req.session.count = 3;
+	if(req.session.count == 3){
+		res.render("third",{});
+	}
 	else
 		res.redirect("/");
-	res.render("third",{});
 };
 exports.fourth = function(req,res){
-	if(req.session.count == 3)
-		req.session.count = 4;
+	if(req.session.count == 4){
+		res.render("fourth",{});
+	}
 	else
 		res.redirect("/");
-	res.render("fourth",{});
 };
 exports.fifth = function(req,res){
 	if(req.session.count == 4)

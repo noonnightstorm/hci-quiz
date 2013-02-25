@@ -5,7 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
+  , check = require("./routes/check")
   , http = require('http')
   , path = require('path');
 
@@ -30,10 +30,11 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-/*app.get('/users', user.list);*/
-app.post("/first_check",routes.first_check);
+app.post("/first_check",check.first_check);
 app.get("/second",routes.second);
+app.post("/second_check",check.second_check);
 app.get("/third",routes.third);
+app.post("/third_check",check.third_check);
 app.get("/fourth",routes.fourth);
 app.get("/fifth",routes.fifth);
 app.get("/sixth",routes.sixth);
