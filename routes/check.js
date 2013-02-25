@@ -17,7 +17,7 @@ exports.second_check = function(req,res){
 	/*text*/
 };
 exports.third_check = function(req,res){
-	if(req.session.count == 3 && req.body.info =="Happy Python Year and Best Wish for you !"){
+	if(req.session.count == 3 && req.body.info == "Happy Python Year and Best Wish for you !"){
 		req.session.count = 4;
 		success(res);
 	}
@@ -25,6 +25,16 @@ exports.third_check = function(req,res){
 		fail(res);		
 	}
 };
+exports.fifth_check = function(req,res){
+	if(req.session.count == 5 && req.body.info =="pass"){
+		console.log("fifth success!");
+		req.session.count = 6;
+		success(res);
+	}
+	else{
+		fail(res);		
+	}
+}
 
 function success(res){
 	res.writeHead(200, {'content-type': 'text/json' });

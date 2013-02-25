@@ -24,29 +24,30 @@ exports.third = function(req,res){
 };
 exports.fourth = function(req,res){
 	if(req.session.count == 4){
+		req.session.count = 5;
 		res.render("fourth",{});
 	}
 	else
 		res.redirect("/");
 };
 exports.fifth = function(req,res){
-	if(req.session.count == 4)
-		req.session.count = 5;
+	if(req.session.count == 5){
+		res.render("fifth",{});
+	}
 	else
 		res.redirect("/");
-	res.render("fifth",{});
 };
 exports.sixth = function(req,res){
-	if(req.session.count == 5)
-		req.session.count = 6;
+	if(req.session.count == 6){
+		res.render("sixth",{});
+	}
 	else
 		res.redirect("/");
-	res.render("sixth",{});
 };
 exports.seventh = function(req,res){
-	if(req.session.count == 6)
-		req.session.count = 7;
+	if(req.session.count == 7){
+		res.render("seventh",{});
+	}
 	else
 		res.redirect("/");
-	res.render("seventh",{});
 };

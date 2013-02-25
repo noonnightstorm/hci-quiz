@@ -37,6 +37,7 @@ app.get("/third",routes.third);
 app.post("/third_check",check.third_check);
 app.get("/fourth",routes.fourth);
 app.get("/fifth",routes.fifth);
+app.post("/fifth_check",check.fifth_check);
 app.get("/sixth",routes.sixth);
 app.get("/seventh",routes.seventh);
 
