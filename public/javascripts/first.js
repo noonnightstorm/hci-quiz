@@ -12,7 +12,6 @@ function pass(){
 		type : "post",
 		cache : false,
 		success : function(data){
-			console.log(data.result);
 			if(data.result == "success")
 			window.location.href = "/second";
 		},

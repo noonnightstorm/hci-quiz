@@ -38,9 +38,7 @@ exports.fifth = function(req,res){
 		res.redirect("/");
 };
 exports.sixth = function(req,res){
-	console.log("come in to sixth exam");
 	if(req.session.count == 6){
-		console.log("sixth exam success!");
 		res.render("sixth",{});
 	}
 	else

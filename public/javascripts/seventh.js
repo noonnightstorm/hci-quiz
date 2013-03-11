@@ -77,7 +77,6 @@ function changeColor(color){
 				items[i] = "0"+items[i];
 			result+=items[i];
 		}
-		/*console.log(result);*/
 		return result;
 	}
 	else
@@ -88,15 +87,14 @@ function pass(){
 		$.ajax({
 			url : "/seventh_check",
 			data : {
-				info : "pass"
+				info : "pass",
+				result : Check.checkCircle() && Check.checkTriangle()
 			},
 			dateType : "json",
 			type : "post",
 			cache : false,
 			success : function(data){
-				console.log(data);
 				if(data.result == "success"){
-					/*window.location.href = "/seventh";*/
 					alert("Thank for your texting!It will be On-line on this Sunday normally!");
 					window.location.href = "/";
 				}

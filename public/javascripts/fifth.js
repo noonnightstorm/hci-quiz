@@ -86,8 +86,6 @@ function execute(selector,name,property){
 	else{
 		return;
 	}
-	/*console.log(name);
-	console.log(property);*/
 	$("."+id).css(name,property);
 }
 
@@ -96,7 +94,9 @@ function pass(){
 		$.ajax({
 			url : "/fifth_check",
 			data : {
-				info : "pass"
+				info : "pass",
+				checkTop : Check.box_top,
+				checkLeft : Check.box_left
 			},
 			dateType : "json",
 			type : "post",
@@ -119,16 +119,3 @@ function pass(){
 		$(".code-text").css("background","red");
 	}
 }
-
-
-/*-webkit-transform:rotate(180deg) scale(-1,1);
-top:210px;
-left:78px;*/
-
-/*-webkit-transform:rotate(180deg) scale(-1,1);
-top:210px;
-left:226px;*/
-
-/*-webkit-transform:rotate(180deg) scale(-1,1);
-top:210px;
-left:352px;*/

@@ -14,7 +14,6 @@ exports.second_check = function(req,res){
 	else{
 		fail(res);		
 	}
-	/*text*/
 };
 exports.third_check = function(req,res){
 	if(req.session.count == 3 && req.body.info == "Happy Python Year and Best Wish for you !"){
@@ -26,7 +25,7 @@ exports.third_check = function(req,res){
 	}
 };
 exports.fifth_check = function(req,res){
-	if(req.session.count == 5 && req.body.info =="pass"){
+	if(req.session.count == 5 && req.body.info =="pass" && req.body.checkTop && req.body.checkLeft){
 		req.session.count = 6;
 		success(res);
 	}
@@ -35,7 +34,7 @@ exports.fifth_check = function(req,res){
 	}
 };
 exports.sixth_check = function(req,res){
-	if(req.session.count == 6 && req.body.info =="pass"){
+	if(req.session.count == 6 && req.body.info =="pass" && req.body.first == "" && req.body.second == "" && req.body.third == ""){
 		req.session.count = 7;
 		success(res);
 	}
@@ -44,7 +43,7 @@ exports.sixth_check = function(req,res){
 	}
 };
 exports.seventh_check = function(req,res){
-	if(req.session.count == 7 && req.body.info =="pass"){
+	if(req.session.count == 7 && req.body.info =="pass" &&req.body.result == true){
 		req.session.count = 8;
 		success(res);
 	}
@@ -63,3 +62,22 @@ function fail(res){
 	res.write( JSON.stringify({ result : "wrong"}) );
 	res.end('\n');
 }
+
+/*second answer*/
+/*bf66f1eecca8f3eb*/
+
+/*third answer*/
+/*Happy Python Year and Best Wish for you !*/
+
+/*fifth answer*/
+/*-webkit-transform:rotate(180deg) scale(-1,1);
+top:210px;
+left:78px;*/
+
+/*-webkit-transform:rotate(180deg) scale(-1,1);
+top:210px;
+left:226px;*/
+
+/*-webkit-transform:rotate(180deg) scale(-1,1);
+top:210px;
+left:352px;*/

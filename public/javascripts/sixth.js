@@ -122,13 +122,15 @@ function pass(){
 	$.ajax({
 		url : "/sixth_check",
 		data : {
-			info : "pass"
+			info : "pass",
+			first : Code.A.join(),
+			second : Code.B.join(),
+			third : Code.C.join()
 		},
 		dateType : "json",
 		type : "post",
 		cache : false,
 		success : function(data){
-			console.log(data);
 			if(data.result == "success"){
 				window.location.href = "/seventh";
 			}
